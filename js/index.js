@@ -15,10 +15,10 @@ function digitPressed(ev) {
 }
 
 document
-  .querySelectorAll('.operators button')
-  .forEach((button) => button.addEventListener('click', operatorsPressed));
+  .querySelectorAll('.oper button')
+  .forEach((button) => button.addEventListener('click', operPressed));
 
-function operatorPressed(ev) {
+function operPressed(ev) {
   if ('-+*/'.includes(display.value[display.value.length - 1])) {
     display.value = display.value.slice(0, -1);
     display.value += ev.target.innerText;
